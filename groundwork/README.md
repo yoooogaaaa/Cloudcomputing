@@ -30,13 +30,13 @@
 
   ## 二、实验过程
 
-  ### (一)购买腾讯云服务器并登入
+  ### (一)购买腾讯云服务器并登入  [购买链接](https://cloud.tencent.com/act/campus?fromSource=gwzcw.2432687.2432687.2432687&amp;utm_medium=cpc&amp;utm_id=gwzcw.2432687.2432687.2432687)
 
-  []: https://cloud.tencent.com/act/campus?fromSource=gwzcw.2432687.2432687.2432687&amp;utm_medium=cpc&amp;utm_id=gwzcw.2432687.2432687.2432687	"购买链接"
+  
 
   #### 	1.购买CentOS 7.6 64位版本，得到一台1核 2GB 1Mbps的服务器
 
-  
+  ![](..\picture 1\2.png)
 
   #### 	2.使用web shell登入
 
