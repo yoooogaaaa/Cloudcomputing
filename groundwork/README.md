@@ -72,11 +72,11 @@
 
   ![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/groundwork/picture%201/7.png)
 
+  
+
   ​		a.使用cd 跳转到本地仓库地址并且初始化
 
-  ```
-git init
-  ```
+  ​		*git init*
 
   ​		b.拷贝GitHub网站中的项目网址
 
@@ -84,43 +84,31 @@ git init
 
   ​		d.首先从远程仓库拉数据
 
-  ```
-git pull origin master
-  ```
+  ​		*git pull origin master*
 
   ​		e.新建README文档，README文档是每个GitHub项目必备，说明项目内容。上文没有创建，在此处完成。
 
-  ```
-touch README.md
-  ```
+  ​		*touch README.md*
+
+  ​		
 
   ​		f.添加文件夹中的所有文件：
-  
-  ```
-  git add .
-  ```
+
+  ​		git add .*
   
   ​		g.查看文件是否处于准备提交的状态
   
-  ```
-  git status 
-  ```
+  ​		*git status*
   
   ​        h.提交文件
   
-  ```
-  git commit -m “提交（这里输入什么都可以）”
-  ```
+  ​		*git commit -m “提交（这里输入什么都可以）”*
   
   ​		注意commit只在本地提交，并未同步到远程服务器。
   
   ​        i.更新
   
-  ```
-  git push -u origin master
-  ```
-  
-  
+  ​		*git push -u origin master*
   
   ### （三）本地安装VMware Workstation和CentOS操作系统
   
@@ -132,9 +120,11 @@ touch README.md
   
   ![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/groundwork/picture%201/6.png)
   
-  ​		b.打开vmware 12，点击右上角→文件→”自定义（高级）“下一步→ ”workstation 12.0“下一步→”安装程序光盘映像文件“选择刚刚下载的镜像服务器 下一步→给虚拟机取名，并且选择安装地址→”默认设置“下一步下一步→分配2G的内存给虚拟机下一步→”桥接“下一步→”默认“下一步→”默认“下一步→ 创建新的磁盘→分别20G内存→下一步→查看自己的信息，确认无误→完成
+  ​		b.打开vmware 12，点击右上角→文件→”自定义（高级）“下一步→ ”workstation 12.0“下一步→”安装程序光盘映像文件“选择刚刚下载的镜像服务器 下一步→给虚拟机取名，并且选择安装地址→”默认设置“下一步下一步→分配2G的内存给虚拟机下一步→”桥接“下一步→”默认“下一步→”默认“下一步→ 创建新的磁盘→分配20G内存→下一步→查看自己的信息，确认无误→完成
 
-![](![4.png](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/groundwork/picture%201/4.png?raw=true))
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/groundwork/picture%201/4.png)
+
+
 
 
 
