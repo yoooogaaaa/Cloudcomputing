@@ -26,6 +26,8 @@ uname -r
 cat /etc/redhat-release
 ```
 
+![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-2.png)
+
 3.更新数据库
 
 ```
@@ -52,6 +54,8 @@ systemctl start docker
 sudo systemctl status docker
 ```
 
+![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-1.png)
+
 7.设置Docker自启动
 
 ```
@@ -64,7 +68,7 @@ sudo systemctl enable docker
 docker version
 ```
 
-
+![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-6.png)
 
 ##### 二、完成Docker安装之后加载CentOS镜像
 
@@ -99,13 +103,13 @@ docker run -d -it --privileged --name wordpress -p 8888:80 -d centos:7 /usr/sbin
 docker ps
 ```
 
-6.进入容器前台（容器id可以只写前几位，如 ：de3）
+6.进入容器前台（容器id可以只写前几位，如 ：de4）
 
 ```
-docker exec -it de3 /bin/bash
+docker exec -it de4 /bin/bash
 ```
 
-
+![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-4.png)
 
 ##### 三、在Docker的CentOS容器实例中安装WordPress
 
@@ -115,7 +119,9 @@ docker exec -it de3 /bin/bash
 >
 > **安装完成后可访问 服务器IP:8888 查看**
 
+![镜像的网站](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-3.png)
 
+![原来的网站](http://106.54.62.234:8888/wp-content/uploads/2019/11/814Z9TAWYDZ3JVJNPW9U-1.png)
 
 ##### 四、将带有WordPress的CentOS镜像推送到容器仓库
 
@@ -145,6 +151,8 @@ docker login
 
 输入刚刚注册的账号密码
 
+![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-5.png)
+
 5.推送镜像
 
 ```
@@ -157,3 +165,4 @@ docker push 镜像名:tag标签
 
 
 
+![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-1.jpg)
