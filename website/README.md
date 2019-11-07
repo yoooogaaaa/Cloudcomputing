@@ -141,6 +141,7 @@ sudo service httpd restart
 至此，LAMP环境已经安装成功，接下来测试PHP。
 
 **4.测试PHP**
+
 这里我们利用一个简单的信息显示页面（info.php）测试PHP。创建info.php并将其置于Web服务的根目录（/var/www/html/）：
 
 sudo vim /var/www/html/info.php
@@ -152,12 +153,10 @@ sudo vim /var/www/html/info.php
 <?php phpinfo(); ?>
 
 ![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/website/picture/%E5%9B%BE%E7%89%8721.png)
+
 本地主机的浏览器中输入:
 http://your_cvm_ip/info.php
 ![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/website/picture/%E5%9B%BE%E7%89%8722.png)
-即可看到如下界面：
-
-![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/website/picture/%E5%9B%BE%E7%89%8721.png)
 
 
 #### 5.安装WordPress以及完成相关配置
@@ -181,7 +180,9 @@ CREATE DATABASE wordpress;
 
 CREATE USER wordpressuser@localhost IDENTIFIED BY 'password';
 
-“wordpressuser”和“password”使用你自定义的用户名和密码。**授权给wordpressuser用户**访问数据库的权限：
+“wordpressuser”和“password”使用你自定义的用户名和密码。
+
+**授权给wordpressuser用户**访问数据库的权限：
 
 GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost IDENTIFIED BY 'password';
 
@@ -228,9 +229,13 @@ sudo chown -R apache:apache /var/www/html/*
 这样Apache Web服务器能够创建、更改WordPress相关文件，同时我们也能够上传文件。
 
 **(3)配置WordPress**
-**定位到wordpress所在文件夹：**cd /var/www/html
+**定位到wordpress所在文件夹：**
 
-**拷贝wp-config-sample.php文件来生成：**cp wp-config-sample.php wp-config.php
+cd /var/www/html
+
+**拷贝wp-config-sample.php文件来生成：**
+
+cp wp-config-sample.php wp-config.php
 
 **然后，通过nano超简单文本编辑器来修改配置，主要是MySQL相关配置：**
 
