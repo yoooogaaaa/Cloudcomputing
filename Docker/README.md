@@ -10,6 +10,8 @@
 
 #### 四、将带有WordPress的CentOS镜像推送到容器仓库
 
+#### 五、Dockerfile
+
 
 
 ##### 一、安装docker
@@ -26,7 +28,7 @@ uname -r
 cat /etc/redhat-release
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-2.png)
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-2.png)
 
 3.更新数据库
 
@@ -54,7 +56,7 @@ systemctl start docker
 sudo systemctl status docker
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-1.png)
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-1.png)
 
 7.设置Docker自启动
 
@@ -68,7 +70,7 @@ sudo systemctl enable docker
 docker version
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-6.png)
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-6.png)
 
 ##### 二、完成Docker安装之后加载CentOS镜像
 
@@ -109,7 +111,7 @@ docker ps
 docker exec -it de4 /bin/bash
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-4.png)
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-4.png))
 
 ##### 三、在Docker的CentOS容器实例中安装WordPress
 
@@ -119,9 +121,9 @@ docker exec -it de4 /bin/bash
 >
 > **安装完成后可访问 服务器IP:8888 查看**
 
-![镜像的网站](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-3.png)
+![镜像的网站](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-3.png)
 
-![原来的网站](http://106.54.62.234:8888/wp-content/uploads/2019/11/814Z9TAWYDZ3JVJNPW9U-1.png)
+![原来的网站](http://106.54.62.234:8888/wp-content/uploads/2019/12/814Z9TAWYDZ3JVJNPW9U.png)
 
 ##### 四、将带有WordPress的CentOS镜像推送到容器仓库
 
@@ -151,7 +153,7 @@ docker login
 
 输入刚刚注册的账号密码
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-5.png)
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-5.png)
 
 5.推送镜像
 
@@ -163,6 +165,80 @@ docker push 镜像名:tag标签
 
 登录Docker网页查看仓库
 
+##### 
+
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-1.jpg)
+
+#### 五、Dockerfile
+
+◼ 安装Apache Web服务器
+
+1.在本地主机新建一个目录（本文为mydocker）存放Dockerfile文件，新建Dockerfile文件：
+
+mkdir /mydocker
+
+cd /mydocker
+
+vim Dockerfile
+
+添加以下内容：
+
+```
+FROM centos:latest
+
+LABEL project="Dockerfile for Apache Web"
+
+RUN yum -y install httpd
+
+EXPOSE 80
+
+VOLUME /var/www/html
+
+ENTRYPOINT [ "/usr/sbin/httpd" ]
+CMD ["-D", "FOREGROUND"]
+```
+
+![img](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-4.png)
+
+2.生成docker镜像
+
+docker build -t centos:httpd .
+
+![img](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-2.png)
+
+3.启动容器实例
+
+mkdir /data
+
+docker run -td -p 8000:80 -v /data:/var/www/html --name=web centos:httpd
+
+![img](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-3-1024x47.png)
+
+这里-p指定本地主机和容器的端口映射，-v指定数据挂载（volume）。
+
+查看启动的容器实例：
+
+4.验证Apache Web（Httpd）是否安装成功
+
+cd /data
+
+vim index.html
+
+随意添加一些内容：
+
+最后使用"http://localhost/"进行测试，得到如下结果：
+
+![img](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-1.png)
 
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/11/test3-1.jpg)
+
+◼ 安装MySQL
+
+
+
+◼ 安装PHP
+
+
+
+◼ 安装WordPress
+
