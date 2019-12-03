@@ -236,6 +236,34 @@ vim index.html
 
 ◼ 安装MySQL
 
+设置创建目录和文件
+mkdir mariadb_dockerfile && cd mariadb_dockerfile
+
+touch db_init.sh
+
+
+
+touch run.sh
+
+#!/bin/bash
+mysqld_safe
+
+DOCKERFILE：
+
+创建镜像
+
+```
+docker build -t centos-mariadb:v1 .
+```
+
+创建容器
+
+```
+docker run -d -p 13306:3306 centos-mariadb:v1 /root/run.sh
+```
+
+登录验证
+
 
 
 ◼ 安装PHP
@@ -243,4 +271,8 @@ vim index.html
 
 
 ◼ 安装WordPress
+
+docker build -t wordpress:v1 .
+
+docker run -d -p 8080:80 centos-wordpress:v1 /root/run.sh
 
