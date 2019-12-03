@@ -28,7 +28,7 @@ uname -r
 cat /etc/redhat-release
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-2.png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(2).png)
 
 3.更新数据库
 
@@ -56,7 +56,7 @@ systemctl start docker
 sudo systemctl status docker
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-1.png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(1).png)
 
 7.设置Docker自启动
 
@@ -70,7 +70,7 @@ sudo systemctl enable docker
 docker version
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-6.png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(6).png)
 
 ##### 二、完成Docker安装之后加载CentOS镜像
 
@@ -111,7 +111,7 @@ docker ps
 docker exec -it de4 /bin/bash
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-4.png))
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(4).png))
 
 ##### 三、在Docker的CentOS容器实例中安装WordPress
 
@@ -121,9 +121,9 @@ docker exec -it de4 /bin/bash
 >
 > **安装完成后可访问 服务器IP:8888 查看**
 
-![镜像的网站](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-3.png)
+![镜像的网站](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(3).png)
 
-![原来的网站](http://106.54.62.234:8888/wp-content/uploads/2019/12/814Z9TAWYDZ3JVJNPW9U.png)
+![原来的网站](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(7).png)
 
 ##### 四、将带有WordPress的CentOS镜像推送到容器仓库
 
@@ -153,7 +153,7 @@ docker login
 
 输入刚刚注册的账号密码
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-5.png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(5).png)
 
 5.推送镜像
 
@@ -165,9 +165,9 @@ docker push 镜像名:tag标签
 
 登录Docker网页查看仓库
 
-##### 
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/test3-1.jpg)
+
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(1).jpg)
 
 #### 五、Dockerfile
 
@@ -198,13 +198,13 @@ ENTRYPOINT [ "/usr/sbin/httpd" ]
 CMD ["-D", "FOREGROUND"]
 ```
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-4.png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/2%20(4).png)
 
 2.生成docker镜像
 
 docker build -t centos:httpd .
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-2.png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/2%20(2).png)
 
 3.启动容器实例
 
@@ -212,7 +212,7 @@ mkdir /data
 
 docker run -td -p 8000:80 -v /data:/var/www/html --name=web centos:httpd
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-3-1024x47.png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/2%20(3).png)
 
 这里-p指定本地主机和容器的端口映射，-v指定数据挂载（volume）。
 
@@ -230,7 +230,7 @@ vim index.html
 
 进行测试，得到如下结果：
 
-![](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-1.png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/2%20(1).png)
 
 
 
