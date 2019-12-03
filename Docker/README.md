@@ -198,13 +198,13 @@ ENTRYPOINT [ "/usr/sbin/httpd" ]
 CMD ["-D", "FOREGROUND"]
 ```
 
-![img](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-4.png)
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-4.png)
 
 2.生成docker镜像
 
 docker build -t centos:httpd .
 
-![img](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-2.png)
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-2.png)
 
 3.启动容器实例
 
@@ -212,7 +212,7 @@ mkdir /data
 
 docker run -td -p 8000:80 -v /data:/var/www/html --name=web centos:httpd
 
-![img](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-3-1024x47.png)
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-3-1024x47.png)
 
 这里-p指定本地主机和容器的端口映射，-v指定数据挂载（volume）。
 
@@ -226,9 +226,11 @@ vim index.html
 
 随意添加一些内容：
 
-最后使用"http://localhost/"进行测试，得到如下结果：
+最后使用 "http://localhost/"
 
-![img](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-1.png)
+进行测试，得到如下结果：
+
+![](http://106.54.62.234:8888/wp-content/uploads/2019/12/2-1.png)
 
 
 
