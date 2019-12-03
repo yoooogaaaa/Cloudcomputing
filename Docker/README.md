@@ -121,9 +121,13 @@ docker exec -it de4 /bin/bash
 >
 > **安装完成后可访问 服务器IP:8888 查看**
 
-![镜像的网站](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(3).png)
+[镜像的网站](http://106.54.62.234:8888/)
 
-![原来的网站](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/test3%20(7).png)
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/5%20(1).png)
+
+[原来的网站](http://106.54.62.234/)
+
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/5.png)
 
 ##### 四、将带有WordPress的CentOS镜像推送到容器仓库
 
@@ -230,6 +234,8 @@ vim index.html
 
 进行测试，得到如下结果：
 
+[点击查看](http://106.54.62.234:8000/)
+
 ![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/2%20(1).png)
 
 
@@ -282,11 +288,15 @@ mkdir wordpress_dockerfile && cd wordpress_dockerfile
 
 Dockerfile：
 
-
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/5%20(3).png)
 
 run.sh
 
 ![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/4%20(5).png)
+
+start.sh
+
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/5%20(5).png)
 
 phptest.php
 
@@ -300,3 +310,6 @@ Mysql:
 
 ![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/4%20(2).png)
 
+[点击查看](http://106.54.62.234:8080/)
+
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/5%20(2).png)
