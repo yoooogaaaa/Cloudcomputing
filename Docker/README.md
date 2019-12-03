@@ -241,7 +241,7 @@ mkdir mariadb_dockerfile && cd mariadb_dockerfile
 
 touch db_init.sh
 
-
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/3%20(3).png)
 
 touch run.sh
 
@@ -250,11 +250,15 @@ mysqld_safe
 
 DOCKERFILE：
 
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/3%20(5).png)
+
 创建镜像
 
 ```
 docker build -t centos-mariadb:v1 .
 ```
+
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/3%20(2).png)
 
 创建容器
 
@@ -262,17 +266,37 @@ docker build -t centos-mariadb:v1 .
 docker run -d -p 13306:3306 centos-mariadb:v1 /root/run.sh
 ```
 
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/3%20(1).png)
+
 登录验证
 
-
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/3%20(4).png)
 
 ◼ 安装PHP
 
-
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/4%20(1).png)
 
 ◼ 安装WordPress
 
-docker build -t wordpress:v1 .
+mkdir wordpress_dockerfile && cd wordpress_dockerfile
 
-docker run -d -p 8080:80 centos-wordpress:v1 /root/run.sh
+Dockerfile：
+
+
+
+run.sh
+
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/4%20(5).png)
+
+phptest.php
+
+< ?php phpinfo();?>
+
+创建容器
+
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/4%20(4).png)
+
+Mysql:
+
+![](https://raw.githubusercontent.com/yoooogaaaa/Cloudcomputing/master/Docker/pic/4%20(2).png)
 
