@@ -13,7 +13,7 @@ useradd -d /home/cephuser -m cephuser
 passwd cephuser
 ```
 
-![](../CEPH/PIC/ (15).png)
+![](../PIC/ (15).png)
 
 授予权限（创建一个sudoers文件，并使用sed编辑/etc/sudoers文件）
 
