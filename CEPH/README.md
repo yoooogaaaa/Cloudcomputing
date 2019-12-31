@@ -343,7 +343,7 @@ ssh mon1
 
 运行下面的命令以检查群集运行情况。
 
-![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/CEPH/PIC/%20(25).png?raw=true)
+![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/CEPH/PIC/(25).png?raw=true)
 
 ![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/CEPH/PIC/%20(24).png?raw=true)
 
