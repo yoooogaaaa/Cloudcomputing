@@ -10,3 +10,7 @@ https://github.com/yoooogaaaa/Cloudcomputing/tree/master/website
 
 https://github.com/yoooogaaaa/Cloudcomputing/tree/master/Docker
 
+## 实验四：Ceph的安装与实践
+
+https://github.com/yoooogaaaa/Cloudcomputing/tree/master/CEPH
+

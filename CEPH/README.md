@@ -337,7 +337,7 @@ ssh mon1
 
 进入ceph
 
-![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/CEPH/PIC/%20(23).png?raw=true)
+![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/CEPH/PIC/(23).png?raw=true)
 
 
 
@@ -345,7 +345,7 @@ ssh mon1
 
 ![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/CEPH/PIC/(25).png?raw=true)
 
-![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/CEPH/PIC/%20(24).png?raw=true)
+![](https://github.com/yoooogaaaa/Cloudcomputing/blob/master/CEPH/PIC/(24).png?raw=true)
 
 恭喜，你成功地建立了一个新的Cephuser集群。
 
